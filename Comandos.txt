@@ -1,0 +1,11 @@
+docker build -t container-hello:latest .
+
+docker tag container-hello:latest profronny/container-hello:latest
+
+docker logout
+
+docker login
+
+docker push profronny/container-hello:latest
+
+docker run profronny/container-hello
